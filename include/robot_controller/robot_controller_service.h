@@ -1,9 +1,8 @@
 #pragma once
-#include <habitat_cv.h>
 #include <cell_world.h>
 #include <easy_tcp.h>
 #include <fstream>
-#include <robot_controller/message.h>
+#include <cell_world_tools.h>
 
 namespace cell_world::robot_controller {
     struct Agent_state{
@@ -34,7 +33,7 @@ namespace cell_world::robot_controller {
         static bool update_spawn_locations();
         static bool set_ghost_min_distance(unsigned int);
         static bool set_spawn_cell();
-        static bool update_agent_state(const habitat_cv::Agent_info  &);
+        static bool update_agent_state(const cell_world::Agent_info  &);
         static bool control_robot(Location, double, Location);
         static int port();
     private:

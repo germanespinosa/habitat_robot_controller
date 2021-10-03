@@ -8,7 +8,7 @@
 using namespace json_cpp;
 using namespace std;
 using namespace robot;
-using namespace habitat_cv;
+using namespace cell_world;
 
 namespace cell_world::robot_controller {
 

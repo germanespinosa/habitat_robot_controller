@@ -9,8 +9,6 @@ project(robot_controller
 
 find_package(Cellworld_tools REQUIRED)
 find_package(Easy-tcp REQUIRED)
-find_package(OpenCV 4.0.1 REQUIRED )
-find_package(Habitat_cv REQUIRED)
 find_package(Robot_lib)
 find_package(Threads)
 
