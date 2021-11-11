@@ -19,7 +19,8 @@ find_package(Threads)
 
 set( robot_controller
 		src/console/robot_controller.cpp
-		src/robot_controller_service.cpp)
+		src/robot_controller_service.cpp
+		src/gamepad.cpp)
 
 
 SET(CMAKE_CXX_FLAGS  "-DC_GNU64=400 -DOS_LINUX -no-pie -Wall -Wextra")
@@ -46,6 +47,10 @@ target_include_directories(robot_controller
 
 add_executable(controller src/console/robot_controller.cpp)
 target_link_libraries(controller robot_controller robot_lib)
+
+add_executable(gamepad src/console/gamepad_controller.cpp)
+target_link_libraries(gamepad robot_controller)
+
 
 ###
 ### TESTS
